@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        box-sizing: border-box;
+    }
+    .wrapper{
+        width: 80%;
+        min-height: 100vh;
+        background-color:aqua;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    button{
+        border: none;
+        padding: 5rem;
+        margin: 3rem;
+        text-align: center;
+        border: 5px solid #108ccf;
+        background-color: #108ccf;
+        font-size: 2rem;
+        color: #fff;
+        position: relative;
+
+    }
+    button.grow_box::after{
+        content: '';
+        background: #ecf0f1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: scale(0, 0);
+        z-index: -1;
+        padding: 0.85em 0.75em;
+}
+     button.grow_box:hover::after{
+        transform: scale(1,1);
+       
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+    <button class="grow_box">GROW BOX</button>
+    
+</body>
+</html>
